@@ -1,7 +1,5 @@
-public class ModeloConservador implements PerfilRisco {
-    @Override
-    public double calcularRisco(Cliente cliente) {
-        // Fórmula conservadora
-        return cliente.getInvestimento() * 0.2 + cliente.getIdade() * 0.8;
+public class ModeloConservador implements PerfilRiscoStrategy {
+    public double calcularPerfil(Cliente cliente) {
+        return cliente.getRenda() * 0.3 + cliente.getIdade() * 0.5 + cliente.getInvestimentos() * 0.2;
     }
 }

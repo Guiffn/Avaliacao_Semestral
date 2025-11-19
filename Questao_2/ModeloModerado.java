@@ -1,7 +1,5 @@
-public class ModeloModerado implements PerfilRisco {
-    @Override
-    public double calcularRisco(Cliente cliente) {
-        // Fórmula moderada
-        return cliente.getInvestimento() * 0.5 + cliente.getIdade() * 0.5;
+public class ModeloModerado implements PerfilRiscoStrategy {
+    public double calcularPerfil(Cliente cliente) {
+        return cliente.getRenda() * 0.5 + cliente.getIdade() * 0.3 + cliente.getInvestimentos() * 0.2;
     }
 }

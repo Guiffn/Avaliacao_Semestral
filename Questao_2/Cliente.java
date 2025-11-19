@@ -1,17 +1,15 @@
 public class Cliente {
+    private double renda;
     private int idade;
-    private double investimento;
+    private double investimentos;
 
-    public Cliente(int idade, double investimento) {
+    public Cliente(double renda, int idade, double investimentos) {
+        this.renda = renda;
         this.idade = idade;
-        this.investimento = investimento;
+        this.investimentos = investimentos;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public double getInvestimento() {
-        return investimento;
-    }
+    public double getRenda() { return renda; }
+    public int getIdade() { return idade; }
+    public double getInvestimentos() { return investimentos; }
 }
